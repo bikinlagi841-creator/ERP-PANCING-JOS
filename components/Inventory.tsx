@@ -47,7 +47,7 @@ export const Inventory: React.FC<InventoryProps> = ({ products, onAddProduct, on
     if (!formData.name || !formData.priceSell) return;
 
     const newProduct: Product = {
-      id: Math.random().toString(36).substr(2, 9),
+      id: Math.random().toString(36).substring(2, 9),
       name: formData.name,
       sku: formData.sku || `SKU-${Date.now()}`,
       category: formData.category as Category,
